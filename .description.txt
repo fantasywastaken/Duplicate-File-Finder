@@ -1,5 +1,0 @@
-Duplicate File Finder | Rust CLI | SHA-256 | Rayon Parallel | Storage Cleanup
-
-Fast multithreaded duplicate-file detector written in Rust. Two-pass algorithm: files are first grouped by exact byte size (near-zero cost), then only same-size candidates are cryptographically hashed with SHA-256 in a Rayon work-stealing pool. Streams files in 64 KiB chunks so memory stays flat even for gigabyte-class inputs. Supports minimum-size filters, human-readable size parsing (KB/MB/GB/TB), interactive one-keep-many-delete mode, and progress reporting on stderr for pipe-safe output.
-
-Keywords: rust, cli, duplicate detection, dupe finder, dedupe, deduplication, sha256, sha-256, hash, cryptographic hash, rayon, multithreaded, parallel, walkdir, filesystem scanner, storage optimization, disk cleanup, disk usage, byte-identical, cross-platform, windows, linux, macos, fantasywastaken.
