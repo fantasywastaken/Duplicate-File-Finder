@@ -1,0 +1,25 @@
+[package]
+name = "dupfind"
+version = "0.1.0"
+edition = "2021"
+authors = ["fantasywastaken"]
+description = "Multithreaded SHA-256 duplicate file finder"
+license = "MIT"
+
+[[bin]]
+name = "dupfind"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4.5", features = ["derive"] }
+colored = "2.1"
+rayon = "1.10"
+sha2 = "0.10"
+walkdir = "2"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true
